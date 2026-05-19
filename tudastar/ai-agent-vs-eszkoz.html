@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030014">
+<meta name="color-scheme" content="dark light">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+
+<title>AI agent vs AI eszköz – mi a fő különbség | Head of AI Tudástár</title>
+<meta name="description" content="Mikor agent és mikor eszköz egy AI? A 80% autonómia szabálya – melyikre van szükséged ahhoz, hogy ne csak gyorsabb, hanem autonóm folyamataid is legyenek.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="bingbot" content="index, follow">
+<meta name="author" content="Head of AI – InnovateIT Consulting Kft.">
+<meta name="publisher" content="InnovateIT Consulting Kft.">
+<meta name="generator" content="Eleventy (Head of AI)">
+
+<meta name="news_keywords" content="AI agent, AI eszköz, autonóm AI, ChatGPT, Claude, n8n">
+<meta name="geo.region" content="HU-HB">
+<meta name="geo.placename" content="Debrecen">
+<meta name="geo.position" content="47.5316;21.6273">
+<meta name="ICBM" content="47.5316, 21.6273">
+
+<link rel="canonical" href="https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html">
+<link rel="alternate" hreflang="hu" href="https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html">
+<link rel="alternate" hreflang="x-default" href="https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html">
+
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="alternate" type="application/llms.txt" href="/llms.txt" title="LLM context (short)">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html">
+<meta property="og:site_name" content="Head of AI">
+<meta property="og:title" content="AI agent vs AI eszköz – mi a fő különbség | Head of AI">
+<meta property="og:description" content="A 80% autonómia szabálya: mikor agent és mikor eszköz egy AI – és miért nem elég csak ChatGPT-t használni.">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:image" content="https://headofai.eu/assets/images/tudastar_agent_tool.png">
+<meta property="og:image:secure_url" content="https://headofai.eu/assets/images/tudastar_agent_tool.png">
+<meta property="og:image:alt" content="AI agent vs AI eszköz – a 80% autonómia szabálya">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="article:published_time" content="2026-04-10T08:00:00+02:00">
+<meta property="article:modified_time" content="2026-05-19T08:00:00+02:00">
+<meta property="article:author" content="Head of AI">
+<meta property="article:publisher" content="https://headofai.eu">
+<meta property="article:section" content="Alapfogalmak">
+<meta property="article:tag" content="AI agent"><meta property="article:tag" content="AI eszköz"><meta property="article:tag" content="autonóm AI"><meta property="article:tag" content="magyar KKV">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI agent vs AI eszköz – mi a fő különbség | Head of AI">
+<meta name="twitter:description" content="A 80% autonómia szabálya: mikor agent és mikor eszköz egy AI – és miért nem elég csak ChatGPT-t használni.">
+<meta name="twitter:image" content="https://headofai.eu/assets/images/tudastar_agent_tool.png">
+<meta name="twitter:image:alt" content="AI agent vs AI eszköz – a 80% autonómia szabálya">
+
+
+
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    functionality_storage: 'granted',
+    security_storage: 'granted'
+  });
+  gtag('set', 'url_passthrough', true);
+  gtag('set', 'ads_data_redaction', false);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://connect.facebook.net">
+<link rel="dns-prefetch" href="https://www.clarity.ms">
+<link rel="dns-prefetch" href="https://code.iconify.design">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/tailwind.css?v=62589c6a0b">
+<link rel="stylesheet" href="/css/style.css?v=62589c6a0b">
+
+
+
+
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js" defer></script>
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "AI agent vs AI eszköz – mi a fő különbség",
+      "description": "Mikor agent és mikor eszköz egy AI? A 80% autonómia szabálya, és miért nem elég csak ChatGPT-t használni.",
+      "datePublished": "2026-04-10T08:00:00+02:00",
+      "dateModified":  "2026-05-19T08:00:00+02:00",
+      "image": "https://headofai.eu/assets/images/tudastar_agent_tool.png",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html" },
+      "inLanguage": "hu-HU",
+      "articleSection": "Alapfogalmak",
+      "keywords": ["AI agent", "AI eszköz", "autonóm AI", "ChatGPT", "Claude", "n8n", "magyar KKV"],
+      "wordCount": 700,
+      "author":    { "@type": "Organization", "name": "Head of AI", "url": "https://headofai.eu/" },
+      "publisher": { "@type": "Organization", "name": "Head of AI", "url": "https://headofai.eu/", "logo": { "@type": "ImageObject", "url": "https://headofai.eu/assets/favicon.svg" } },
+      "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "header p", "h2"] }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Főoldal",  "item": "https://headofai.eu/" },
+        { "@type": "ListItem", "position": 2, "name": "Tudástár", "item": "https://headofai.eu/tudastar/" },
+        { "@type": "ListItem", "position": 3, "name": "AI agent vs AI eszköz", "item": "https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html" }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+
+</head>
+<body class="relative overflow-x-hidden">
+
+
+<div class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+  <div class="stars absolute inset-0"></div>
+  <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-violet-600/20 blur-[120px] rounded-full opacity-40"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-900/20 blur-[100px] rounded-full opacity-30"></div>
+</div>
+
+
+<nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#030014]/70 backdrop-blur-xl">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-[0_0_20px_rgba(124,58,237,0.4)]">
+        <iconify-icon icon="lucide:compass" width="16" class="text-white"></iconify-icon>
+      </span>
+      <span class="text-sm font-semibold tracking-tight text-white group-hover:text-violet-200 transition-colors">Head of AI</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      
+      <a href="/#megoldas" data-cta-location="nav_megoldas" class="text-xs font-medium text-slate-400 hover:text-white transition-colors">Megoldás</a>
+      
+      <a href="/#csapat" data-cta-location="nav_csapat" class="text-xs font-medium text-slate-400 hover:text-white transition-colors">Csapat</a>
+      
+      <a href="/tudastar.html" data-cta-location="nav_tudastar" class="text-xs font-medium text-slate-400 hover:text-white transition-colors">Tudástár</a>
+      
+      <a href="/#kapcsolat" data-cta-location="nav_kapcsolat" class="text-xs font-medium text-slate-400 hover:text-white transition-colors">Kapcsolat</a>
+      
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="/#kapcsolat" data-cta-location="nav_cta" class="hidden sm:inline-flex px-5 py-2 text-xs font-medium text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all items-center gap-2">
+        <span>Ingyenes konzultáció</span>
+        <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+      </a>
+      <button type="button" data-menu-toggle aria-label="Menü" aria-expanded="false" class="md:hidden p-2 text-white">
+        <iconify-icon data-menu-open icon="lucide:menu" width="22"></iconify-icon>
+        <iconify-icon data-menu-close icon="lucide:x" width="22" style="display:none"></iconify-icon>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" data-mobile-menu role="dialog" aria-modal="true" aria-label="Főmenü">
+  
+  <a href="/#megoldas" data-cta-location="mobile_menu_megoldas">Megoldás</a>
+  
+  <a href="/#csapat" data-cta-location="mobile_menu_csapat">Csapat</a>
+  
+  <a href="/tudastar.html" data-cta-location="mobile_menu_tudastar">Tudástár</a>
+  
+  <a href="/#kapcsolat" data-cta-location="mobile_menu_kapcsolat">Kapcsolat</a>
+  
+  <a href="/#kapcsolat" data-cta-location="mobile_menu_cta" class="btn-primary mt-4">Ingyenes konzultáció</a>
+</div>
+
+
+
+<nav class="relative z-10 pt-28 px-6" aria-label="Kenyérmorzsa">
+  <ol class="max-w-2xl mx-auto flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] text-slate-500" itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      
+        <a href="/" class="hover:text-violet-300 transition-colors" itemprop="item"><span itemprop="name">Főoldal</span></a>
+      
+      <meta itemprop="position" content="1">
+      <span class="text-slate-700">/</span>
+    </li>
+    
+    <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      
+        <a href="/tudastar/" class="hover:text-violet-300 transition-colors" itemprop="item"><span itemprop="name">Tudástár</span></a>
+      
+      <meta itemprop="position" content="2">
+      <span class="text-slate-700">/</span>
+    </li>
+    
+    <li class="inline-flex items-center gap-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      
+        <span class="text-slate-400" aria-current="page" itemprop="name">AI agent vs AI eszköz</span>
+      
+      <meta itemprop="position" content="3">
+      
+    </li>
+    
+  </ol>
+</nav>
+
+
+
+<div class="reading-progress" data-reading-progress></div>
+
+  
+
+  
+
+  <main class="relative z-10 pt-32 pb-24 px-6">
+    <article class="max-w-2xl mx-auto">
+
+      <header class="mb-12 fade-up">
+        <span class="text-[10px] text-violet-300 uppercase tracking-widest font-medium">Alapfogalmak &middot; 4 perc olvasás</span>
+        <h1 class="text-3xl md:text-5xl font-medium tracking-tight text-white mt-3 mb-5 leading-[1.1]">
+          AI agent vs AI eszköz –
+          <span class="gradient-text">a fő különbség</span>
+        </h1>
+        <p class="text-lg text-slate-400 leading-relaxed">
+          Ha minden „AI-eszközt" egy kalap alá veszel, az erejüknek a felét elveszíted.
+          Lássuk a különbséget – egyetlen mondatban.
+        </p>
+      </header>
+
+      <div class="article-body fade-up stagger-100">
+
+        <blockquote>
+          Ha 80%-ban magától dolgozik, az <strong>agent</strong>. Ha lépésről lépésre te irányítod, az <strong>eszköz</strong>.
+        </blockquote>
+
+        <p>
+          Ez a legtisztább meghatározás. Most nézzük, mit jelent ez a gyakorlatban – és miért fontos, hogy ismerd a különbséget.
+        </p>
+
+        <h2>AI eszköz: te irányítod</h2>
+        <p>
+          Az AI eszköz az, amit aktívan használsz. Te adsz utasítást, te értékeled az eredményt, te döntesz a következő lépésről. <strong>A kezdeményezés a tied.</strong>
+        </p>
+        <p>Például:</p>
+        <ul>
+          <li><strong>ChatGPT, amivel megírsz egy e-mailt.</strong> Te kérdezed, te szerkeszted, te küldöd ki.</li>
+          <li><strong>Claude, amivel átolvastatsz egy szerződést.</strong> Te döntöd el, mit kérdezz róla.</li>
+          <li><strong>Midjourney, amivel képet generálsz egy kampányhoz.</strong> Te írod a leírást, te válogatsz.</li>
+        </ul>
+        <p>
+          Az eszköz felgyorsít egy emberi munkát, de a folyamat csak addig megy, ameddig te elindítod. Ha holnap szabadságra mész, az eszköz nem csinál semmit.
+        </p>
+
+        <h2>AI agent: önállóan dolgozik</h2>
+        <p>
+          Az AI agent olyan rendszer, amely <strong>magától elindul</strong> egy esemény hatására, és önállóan végigvisz egy folyamatot. Neked csak akkor kell beavatkoznod, ha valami szokatlan történik.
+        </p>
+        <p>Például:</p>
+        <ul>
+          <li><strong>E-mail-szűrő automatika</strong>, ami beérkezéskor besorolja az e-mailt, válaszol az egyszerűekre, a fontosakat továbbküldi.</li>
+          <li><strong>Bizonylat-feldolgozó</strong>, ami a beérkező PDF-ekből kiolvassa az adatokat, javasol kontírozást, és jelez, ha valami szokatlant talál.</li>
+          <li><strong>Cégkutató agent</strong>, ami minden hétfőn összegyűjt 50 új céget, kiegészíti az adataikat, és kilistázza a sales-csapatodnak.</li>
+        </ul>
+        <p>
+          Az agent nem csak gyorsabb – <strong>egyáltalán nem igényli a jelenlétedet</strong>. Épp ezért egészen máshogy skálázódik.
+        </p>
+
+        <h2>Mikor melyik kell?</h2>
+        <p>
+          Mindkettő. De a különbség eldönti, mit építesz:
+        </p>
+        <ul>
+          <li><strong>Egyedi, kreatív, ritka feladat → eszköz.</strong> Egy értékesítési bemutatkozó megírása, ami minden ügyfélnél más. Itt a te ízlésed kell.</li>
+          <li><strong>Ismétlődő, jól definiált, gyakori feladat → agent.</strong> Ami minden héten 30-szor ugyanúgy lezajlik. Itt nem te kellesz, csak a folyamat.</li>
+        </ul>
+
+        <h2>Miért keverik mégis össze őket?</h2>
+        <p>
+          Mert a ChatGPT egyszerre tűnik mindkettőnek. Tudsz csevegni vele (eszköz), és tudsz neki GPT-Action-t adni (agent-jellegű). A szakma viszont nem ezt nevezi agentnek – az igazi agent <strong>saját döntéseket hoz, hozzáfér a rendszereidhez, és saját kimenetet készít</strong> emberi utasítás nélkül.
+        </p>
+
+        <h2>Az üzleti különbség</h2>
+        <p>
+          Ha csak eszközöket vezetsz be, gyorsabb leszel. Ha agenteket is, akkor <strong>új kapacitást építesz</strong>. Pontosan ez a különbség az „AI használata" és az „AI-csapat felépítése" között – és ezért nem ugyanaz a 200 ezer forintos ChatGPT-előfizetés, mint egy 2 millió forintos AI-folyamatautomatika.
+        </p>
+
+        <p>
+          A Head of AI-nál mindkettőt csináljuk, de a fő értéket akkor adjuk, amikor <strong>10 ember helyett 12 ember kapacitását építjük fel két ember béréért</strong> – agentekkel, nem eszközökkel.
+        </p>
+      </div>
+
+      <div class="mt-16 p-8 rounded-2xl glass-panel text-center fade-up">
+        <h3 class="text-xl font-medium text-white mb-3">Egy konkrét agentet építünk a cégedbe</h3>
+        <p class="text-slate-400 text-sm mb-6 max-w-md mx-auto">Mondd el, melyik folyamatod ismétlődő. Megnézzük együtt, agentté lehet-e tenni – és mennyi időt-pénzt hoz vissza.</p>
+        <a href="../index.html#kapcsolat" class="btn-primary">
+          Beszéljünk a folyamataidról
+          <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+        </a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-white/5 flex flex-wrap gap-4 justify-between text-sm fade-up">
+        <a href="ai-menedzseri-szemlelet.html" class="text-violet-300 hover:text-white transition-colors inline-flex items-center gap-2">
+          <iconify-icon icon="lucide:arrow-left" width="14"></iconify-icon>
+          Menedzseri szemlélet
+        </a>
+        <a href="4p-modszer.html" class="text-violet-300 hover:text-white transition-colors inline-flex items-center gap-2">
+          4P módszer
+          <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+        </a>
+      </div>
+    </article>
+  </main>
+
+  
+
+  <script src="../js/main.js"></script>
+
+
+
+
+
+<a
+  href="/#kapcsolat"
+  data-sticky-mobile-cta
+  data-cta-location="sticky_mobile_cta"
+  class="md:hidden fixed bottom-4 left-4 right-4 z-40 px-5 py-3 text-sm font-medium text-white text-center bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full shadow-[0_8px_28px_rgba(124,58,237,0.45)] opacity-0 translate-y-3 pointer-events-none transition-all"
+>
+  Ingyenes konzultáció
+</a>
+
+
+
+<footer class="relative z-10 bg-[#020010] pt-16 pb-8 px-6 border-t border-white/5">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+    <div class="col-span-2 md:col-span-2">
+      <div class="flex items-center gap-2 mb-4 text-white">
+        <span class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center">
+          <iconify-icon icon="lucide:compass" width="16" class="text-white"></iconify-icon>
+        </span>
+        <span class="text-sm font-semibold tracking-tight">Head of AI</span>
+      </div>
+      <p class="text-xs text-slate-500 leading-relaxed max-w-xs mb-4">
+        Bevezetjük az AI-t a céged működésébe, aztán a kulcsot is a kezedbe adjuk. Magyar Head of AI csapat KKV-knak.
+      </p>
+      <p class="text-[11px] text-slate-600 leading-relaxed max-w-xs">
+        <strong class="text-slate-500">Üzemeltető:</strong> InnovateIT Consulting Kft.<br>
+        4032 Debrecen, Tankó Béla út 27. 2. ajtó
+      </p>
+    </div>
+
+    <div>
+      <h4 class="text-white text-xs font-medium mb-4 uppercase tracking-wider">Cég</h4>
+      <ul class="space-y-2.5 text-xs text-slate-500">
+        
+        <li><a href="/#csapat" class="hover:text-white transition-colors">Csapat</a></li>
+        
+        <li><a href="/#megoldas" class="hover:text-white transition-colors">Megoldás</a></li>
+        
+        <li><a href="/tudastar.html" class="hover:text-white transition-colors">Tudástár</a></li>
+        
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white text-xs font-medium mb-4 uppercase tracking-wider">Tudástár</h4>
+      <ul class="space-y-2.5 text-xs text-slate-500">
+        <li><a href="/tudastar.html" class="hover:text-white transition-colors">Minden cikk</a></li>
+        <li><a href="/tudastar/ai-menedzseri-szemlelet.html" class="hover:text-white transition-colors">Menedzseri szemlélet</a></li>
+        <li><a href="/tudastar/4p-modszer.html" class="hover:text-white transition-colors">4P módszer</a></li>
+        <li><a href="/tudastar/ai-alkalmazott-roi.html" class="hover:text-white transition-colors">AI ROI-számítás</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white text-xs font-medium mb-4 uppercase tracking-wider">Jogi</h4>
+      <ul class="space-y-2.5 text-xs text-slate-500">
+        
+        <li><a href="/adatkezelesi-tajekoztato.html" class="hover:text-white transition-colors">Adatkezelési tájékoztató</a></li>
+        
+        <li><a href="/cookie-tajekoztato.html" class="hover:text-white transition-colors">Cookie tájékoztató</a></li>
+        
+        <li><a href="/aszf.html" class="hover:text-white transition-colors">ÁSZF</a></li>
+        
+        <li><a href="mailto:info@headofai.eu" class="hover:text-white transition-colors">info@headofai.eu</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-[11px] text-slate-600">© <span data-year></span> InnovateIT Consulting Kft. &middot; Head of AI &middot; Minden jog fenntartva.</p>
+    <p class="text-[11px] text-slate-700">Készítette a Head of AI csapata &middot; 100% remote, Magyarországon</p>
+  </div>
+</footer>
+
+
+<script src="/js/tracking.js?v=62589c6a0b" defer></script>
+<script src="/js/attribution.js?v=62589c6a0b" defer></script>
+<script src="/js/meta-enhance.js?v=62589c6a0b" defer></script>
+<script src="/js/analytics.js?v=62589c6a0b" defer></script>
+<script src="/js/main.js?v=62589c6a0b" defer></script>
+<script src="/js/form.js?v=62589c6a0b" defer></script>
+<script src="/js/cookie-consent.js?v=62589c6a0b" defer></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/service-worker.js').catch(function () {});
+    });
+  }
+</script>
+
+
+</body>
+</html>

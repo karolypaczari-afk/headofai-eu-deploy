@@ -1,0 +1,21 @@
+{
+  "name": "Head of AI – Magyar Head of AI ügynökség",
+  "short_name": "Head of AI",
+  "description": "AI munkatársak magyar KKV-knak. 90 nap alatt termelésben, vendor-lock nélkül.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#030014",
+  "theme_color": "#030014",
+  "lang": "hu",
+  "dir": "ltr",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "/assets/favicon.svg",                "type": "image/svg+xml", "sizes": "any",     "purpose": "any maskable" },
+    { "src": "/assets/apple-touch-icon.png",       "type": "image/png",     "sizes": "180x180", "purpose": "any" },
+    { "src": "/assets/pwa-icon-192.png",           "type": "image/png",     "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "/assets/pwa-icon-512.png",           "type": "image/png",     "sizes": "512x512", "purpose": "any maskable" }
+  ],
+  "prefer_related_applications": false
+}

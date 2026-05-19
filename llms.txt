@@ -1,0 +1,100 @@
+# Head of AI
+
+> Magyar Head of AI ügynökség KKV-knak. Bevezetjük az AI-t a céged működésébe (Claude, n8n, OpenClaw, Hermes alapon), 90 nap alatt termelésbe állítjuk, és a kulcsot a kezedbe adjuk – nincs vendor lock. Több mint 40 év összesített KKV-tapasztalat, 100% távmunkás csapat Magyarországról.
+
+A teljes, hosszú-kontextusú változat: https://headofai.eu/llms-full.txt
+
+## Mit csinálunk
+
+- **AI-lehetőségtérkép (10 nap)** — folyamat-leltár, top-5 AI-felhasználás azonosítása forintra kiszámolt megtérülési becsléssel, 90 napos menetrend, fix árú pilot-javaslat.
+- **Quick-win build (4 hét)** — az első AI-munkatárs termelésbe állítva, fix ár, fix határidő, átadó képzés a csapatnak.
+- **Head of AI retainer (6 hó+)** — havidíjas embedded szolgáltatás, 5+ AI-agent megépítése, csapat-betanítás teljes önállóságig. Havi felmondás-lehetőség, hogy garantáltan ne legyen függés.
+
+## A 10 AI-munkatárs, akiket termelésbe állítunk
+
+1. **Kreatív vezető** — hirdetési kapaszkodók, kampány-vázlat, vizuális koncepció.
+2. **Hirdetéskezelő** — Meta/Google/LinkedIn kampány-optimalizálás, A/B-tesztek, heti riport.
+3. **Szövegíró** — hirdetésszöveg, e-mail-sorozat, SEO-blogcikk a céges hangon.
+4. **Bizonylat-feldolgozó** — PDF-számla kiolvasás, kontírozási javaslat, ONYA-export. Könyvelőnek heti 8 óra.
+5. **Ügyfélszolgálati agent** — magyar nyelvű chat- és e-mail-válasz, 80% lezárás, kollégának átadás komplett előzménnyel.
+6. **Sales-asszisztens** — cégkutatás, személyre szabott megkereső e-mail, időpontfoglalás a naptárba.
+7. **Folyamat-koordinátor** — CRM + számlázó + Slack összekötés, n8n/Make integrációk, adatszinkron.
+8. **Kutató-elemző** — versenytárs-figyelés, piaci összegzés, heti vezetői összefoglaló.
+9. **Ügyfél-fogadó** — cégadat-ellenőrzés, dokumentum-bekérés, NAV-ellenőrzés (2 nap helyett 2 óra).
+10. **Projekt-koordinátor** — teendőlisták, akadály-jelzés, határidő-követés, heti státusz.
+
+## Kinek
+
+Magyar KKV-tulajdonosok (5–50 FTE), különösen:
+- Könyvelő irodák (bizonylat-feldolgozás, kontírozás, NAV-integráció, e-VAT 2026 felkészülés)
+- E-commerce / D2C (HU-native ügyfélszolgálati agent, product description, cart-abandonment, return-handling)
+- Professzionális szolgáltatók (ügyfél-onboarding, KYC, riport-automatizáció, sales follow-up)
+
+## Egyedi értékajánlat
+
+A magyar piacon a legtöbb AI-ügynökség vendor-lock-ot épít. Mi az ellenkezőjét csináljuk: nyílt eszközökkel (Claude, n8n, OpenClaw, Hermes) építünk, a hozzáférések a tieid, a csapatodat betanítjuk az önálló üzemeltetésre. Ha holnap fel akarsz mondani nekünk, a rendszer simán megy tovább.
+
+## Garancia
+
+90 napon belül mérhető ROI, vagy ingyen folytatjuk a munkát, amíg meg nem érkezik. A kereteket az elején közösen szögezzük le forintban.
+
+## Tudástár-cikkek
+
+- [Te vezetsz, az AI a végrehajtó](https://headofai.eu/tudastar/ai-menedzseri-szemlelet.html) — Menedzseri AI-szemlélet KKV-vezetőknek.
+- [AI agent vs AI eszköz – mi a fő különbség](https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html) — 80% autonómia szabálya, miért nem elég csak ChatGPT-t használni.
+- [A 4P módszer: így beszélj az AI-jal](https://headofai.eu/tudastar/4p-modszer.html) — Példa, Priming, Process, Prompt.
+- [Mennyit ér egy AI munkatárs](https://headofai.eu/tudastar/ai-alkalmazott-roi.html) — ROI-számítás template magyar KKV-számokra.
+- [60% dokumentációs idő megspórolva a SWIFT-nél](https://headofai.eu/tudastar/swift-dokumentacio.html) — Esettanulmány Tier-1 pénzügyi környezetben.
+- [Pénzszivárgás a folyamatokban](https://headofai.eu/tudastar/penzszivargas-folyamatban.html) — 6Sigma a gyakorlatban, opportunity-to-invoice.
+- [14%-ról 21%-ra – workflow-bevezetés](https://headofai.eu/tudastar/workflow-bevezetes.html) — Önkéntes adopcio, korai hasznosság.
+- [10 főnyi kapacitás visszanyerve automatizálással](https://headofai.eu/tudastar/automatizalas-it-multinal.html) — Multinacionális IT-cég esete.
+- [3 lépés, amivel 500 ezer eurót spóroltunk](https://headofai.eu/tudastar/500-ezer-euro-megtakaritas.html) — Value stream mapping, platform-konszolidáció, AI-automatizáció.
+- [Kedvenc eszközeim folyamatfejlesztéshez](https://headofai.eu/tudastar/folyamatfejlesztes-eszkozok.html) — Project charter, VSM, SIPOC, swimlane + AI-réteg.
+
+## Gyakori kérdések (FAQ)
+
+**Mit jelent „a céged Head of AI-ja"?**
+Egy belső Head of AI évi 25–40 millió Ft. Mi projekt- és havidíjas formában visszük át ugyanezt a szerepet a cégedbe — főállás-szintű bér nélkül, vendor lock nélkül.
+
+**Mennyibe kerül?**
+Az AI-lehetőségtérkép 10 nap alatt megmondja a pontos forintkeretet a te folyamatodra. Most pilot-árazás él az első 5 magyar referenciának.
+
+**Függőségbe kerülünk?**
+Nem. Nyílt eszközökkel (Claude, n8n, OpenClaw, Hermes) építünk, minden hozzáférés a tied, a csapat önállóan üzemelteti.
+
+**Mennyi időt vesz el a csapatomtól?**
+Átvilágítás: 2-3 óra összesen. Fejlesztés: heti 1-2 óra egyeztetés. Átadó képzés: 2×90 perc.
+
+**GDPR rendben van?**
+EU-szerverek, LLM-szerződések, ahol az adat sose kerül betanításba, DPA minden ügyféllel.
+
+**Miért nem elég csak ChatGPT-t használni?**
+A ChatGPT eszköz, az AI-munkatárs agent: önállóan visz végig egy folyamatot, bekötve a rendszereidbe. A különbség akkora, mint egy konyhakés és egy automatizált étterem között.
+
+**5 fő alatt is megéri?**
+Igen, sőt: ott a leglátványosabb. Egy 5 fős cégnél már egy AI-munkatárs megduplázhatja a kapacitást anélkül, hogy felvennél valakit.
+
+## Csapat
+
+- **Paczári Károly** — Alapító, Head of AI. 20+ év tech, AI-rendszerek építése az első óra óta. Tacit Head of AI-vizsga. https://www.linkedin.com/in/paczarikaroly/
+- **Szántai Tibor** — Marketing- és kampánystratégia. 15+ év, magyar és nemzetközi márkák. https://genmarketer.hu/
+- **Horváth Boglárka** — Folyamat- és AI-bevezetés. 14 év SWIFT, NTT, BT folyamatok. 1,1 millió euró igazolt megtakarítás. https://www.linkedin.com/in/boglarka-paczari-horvath/
+- **Kukoly Dávid** — Hirdetéskezelés, Meta/Google/LinkedIn. Milliárdos kezelt büdzsé. https://www.fluiddigital.pro/
+
+## Mérőszámok
+
+- 45 nap átlagos megtérülési idő az első AI-munkatárs élesítése után
+- 80 óra hetente megspórolt emberi munka ügyfelenként
+- 6 hét az első mérhető megtakarításig
+
+## Tech stack
+
+Claude (Anthropic), n8n, OpenClaw, OpenAI, Hermes, Make, Zapier.
+
+## Kapcsolat
+
+- Web: https://headofai.eu
+- E-mail: info@headofai.eu
+- Üzemeltető: InnovateIT Consulting Kft. — 4032 Debrecen, Tankó Béla út 27. 2. ajtó, Magyarország
+- Nyelv: magyar (EU-skálázáskor angol külön aldomain)
+- Munkavégzés: 100% távmunka, Magyarországról

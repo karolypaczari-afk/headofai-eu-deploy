@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
+
+  <!-- Főoldal -->
+  <url>
+    <loc>https://headofai.eu/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://headofai.eu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://headofai.eu/"/>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/hero_ai_team.png</image:loc>
+      <image:title>Head of AI – AI-csapat KKV-knak</image:title>
+      <image:caption>A Head of AI csapata: AI-bevezetés magyar KKV-knak vendor lock nélkül.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Tudástár listaoldal -->
+  <url>
+    <loc>https://headofai.eu/tudastar/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://headofai.eu/tudastar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://headofai.eu/tudastar/"/>
+  </url>
+
+  <!-- Tudástár cikkek -->
+  <url>
+    <loc>https://headofai.eu/tudastar/ai-menedzseri-szemlelet.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/tudastar_ceo_ai.png</image:loc>
+      <image:title>Te vagy a vezető, az AI a végrehajtó</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/ai-agent-vs-eszkoz.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/tudastar_agent_tool.png</image:loc>
+      <image:title>AI agent vs AI eszköz – mi a fő különbség</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/4p-modszer.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/tudastar_4p.png</image:loc>
+      <image:title>A 4P módszer – így beszélj az AI-jal</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/ai-alkalmazott-roi.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/tudastar_roi.png</image:loc>
+      <image:title>Mennyit ér egy AI munkatárs – ROI-számítás</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/swift-dokumentacio.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/hero_ai_team.png</image:loc>
+      <image:title>60% dokumentációs idő megspórolva a SWIFT-nél AI-jal</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/penzszivargas-folyamatban.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/blog-money-leaks.webp</image:loc>
+      <image:title>Pénzszivárgás a folyamatokban</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/workflow-bevezetes.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/blog-adoption-success.webp</image:loc>
+      <image:title>14%-ról 21%-ra – ahogy az új workflow tényleg beépült</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/automatizalas-it-multinal.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/blog-automation-efficiency.webp</image:loc>
+      <image:title>10 főnyi kapacitás visszanyerve automatizálással</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/500-ezer-euro-megtakaritas.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/blog-500k-savings.webp</image:loc>
+      <image:title>3 lépés, amivel 500 ezer eurót spóroltunk</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/tudastar/folyamatfejlesztes-eszkozok.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/blog-process-tools.webp</image:loc>
+      <image:title>Kedvenc eszközeim egy komplex folyamatfejlesztés indításához</image:title>
+    </image:image>
+  </url>
+
+  <!-- Csapat oldalak -->
+  <url>
+    <loc>https://headofai.eu/csapat/horvath-boglarka.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://headofai.eu/assets/images/team/boglarka.jpg</image:loc>
+      <image:title>Horváth Boglárka – nagyvállalati AI-fegyelem, KKV-méretben</image:title>
+    </image:image>
+  </url>
+
+  <!-- Jogi oldalak -->
+  <url>
+    <loc>https://headofai.eu/adatkezelesi-tajekoztato.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/cookie-tajekoztato.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://headofai.eu/aszf.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

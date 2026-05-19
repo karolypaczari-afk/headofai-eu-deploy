@@ -1,0 +1,26 @@
+# Head of AI — /api/ endpoint hardening.
+# Inherits the document-root .htaccess; adds POST-only + deny-config rules.
+
+# Never cache API responses
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+# Block direct access to config files, logs, example templates, README.
+<FilesMatch "(?i)^(capi-config(\.example)?\.php|smtp-config(\.example)?\.php|mailerlite-config(\.example)?\.php|db-config(\.example)?\.php|README\.md|\.env|.*\.log)$">
+    Require all denied
+</FilesMatch>
+
+# Logs directory — fully denied. PHP fopen/fwrite still works server-side.
+RedirectMatch 404 ^/api/logs(/|$)
+
+# SQL migrations + PHP includes — never served publicly.
+RedirectMatch 404 ^/api/sql(/|$)
+RedirectMatch 404 ^/api/lib(/|$)
+
+# Method gating happens inside contact.php (returns 405 for non-POST).
+# A previous block used <FilesMatch "\.php$"> + <Limit GET HEAD ...> to deny
+# scrapers at the .htaccess layer, but Hostinger's LiteSpeed Web Server
+# applies the deny to ALL HTTP methods (including POST), breaking the form.

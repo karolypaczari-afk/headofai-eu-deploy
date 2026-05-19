@@ -1,0 +1,22 @@
+# Head of AI — /admin/ hardening.
+# Inherits the document-root .htaccess; layers on auth-area-only rules.
+
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag             "noindex, nofollow, noarchive"
+    Header set Cache-Control                   "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma                          "no-cache"
+    Header always set Referrer-Policy          "no-referrer"
+    Header always set Content-Security-Policy  "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+</IfModule>
+
+# Deny config files + example templates + any stray log/env.
+<FilesMatch "(?i)^(admin-config(\.example)?\.php|README\.md|\.env|.*\.log)$">
+    Require all denied
+</FilesMatch>
+
+# /admin/lib/ and /admin/views/ are server-side includes; never serve directly.
+RedirectMatch 404 ^/admin/lib(/|$)
+RedirectMatch 404 ^/admin/views(/|$)
+
+# (Method gating happens INSIDE the PHP files — see api/.htaccess for the
+# rationale: Hostinger's LiteSpeed applies <Limit> to all methods.)

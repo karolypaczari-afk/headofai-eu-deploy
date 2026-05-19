@@ -1,0 +1,177 @@
+# Head of AI — Hostinger / Apache 2.4 production config.
+# Drop this file at the document root. The site/api/ folder has its own
+# .htaccess for stricter rules. Optimized for Hostinger shared hosting:
+# mod_rewrite, mod_headers, mod_deflate, mod_brotli (if compiled),
+# mod_expires, mod_filter.
+
+# ===========================================================
+#  Indexes / charset
+# ===========================================================
+Options -Indexes +FollowSymLinks
+AddDefaultCharset UTF-8
+
+# Force UTF-8 on common text types
+AddCharset UTF-8 .html .css .js .json .xml .svg .txt .webmanifest
+
+# Modern MIME types
+AddType application/manifest+json .webmanifest
+AddType application/wasm          .wasm
+AddType font/woff2                .woff2
+AddType image/avif                .avif
+AddType image/webp                .webp
+
+# ===========================================================
+#  HTTPS, www → apex, extensionless URLs
+# ===========================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # www.headofai.eu → headofai.eu (canonical apex)
+    RewriteCond %{HTTP_HOST} ^www\.headofai\.com$ [NC]
+    RewriteRule ^(.*)$ https://headofai.eu/$1 [R=301,L]
+
+    # http → https
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Strip trailing slash on non-directory URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+    # /foo  → /foo.html  (only if /foo isn't a real file or directory)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+?)/?$ $1.html [L]
+
+    # Hide the .html ending — 301 redirect /foo.html → /foo
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+</IfModule>
+
+# ===========================================================
+#  Security headers
+# ===========================================================
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set X-Content-Type-Options    "nosniff"
+    Header always set X-Frame-Options           "SAMEORIGIN"
+    Header always set Referrer-Policy           "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy        "geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Resource-Policy "same-site"
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+
+    # Drop "Server: …" version banner where Hostinger allows it
+    Header unset Server
+    Header unset X-Powered-By
+
+    # Content-Security-Policy — permissive enough for current CDNs we use
+    # (Iconify, Google Fonts, Tag Manager, Facebook Pixel, Clarity, Hotjar).
+    # Tighten further once we self-host fonts + remove Iconify CDN.
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://code.iconify.design https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://www.clarity.ms https://*.hotjar.com https://*.hotjar.io https://api.iconify.design https://api.simplesvg.com https://api.unisvg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://connect.facebook.net https://www.facebook.com https://*.clarity.ms https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://api.iconify.design https://api.simplesvg.com https://api.unisvg.com https://formspree.io; frame-src 'self' https://www.facebook.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests"
+</IfModule>
+
+# ===========================================================
+#  Compression
+# ===========================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/manifest+json
+    AddOutputFilterByType DEFLATE image/svg+xml application/x-font-ttf font/opentype font/otf font/ttf
+</IfModule>
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json application/xml application/manifest+json
+    AddOutputFilterByType BROTLI_COMPRESS image/svg+xml font/opentype font/otf font/ttf
+</IfModule>
+
+# ===========================================================
+#  Cache-Control
+# ===========================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML — short cache so copy/code updates land within ~5 min
+    ExpiresByType text/html              "access plus 5 minutes"
+    ExpiresByType application/xhtml+xml  "access plus 5 minutes"
+
+    # CSS / JS — 7 days base; immutable override below for fingerprinted ?v=
+    ExpiresByType text/css               "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/javascript        "access plus 7 days"
+
+    # Fonts — 1 year
+    ExpiresByType font/woff              "access plus 1 year"
+    ExpiresByType font/woff2             "access plus 1 year"
+    ExpiresByType font/otf               "access plus 1 year"
+    ExpiresByType font/ttf               "access plus 1 year"
+    ExpiresByType application/font-woff  "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # Images — 30 days
+    ExpiresByType image/jpeg             "access plus 30 days"
+    ExpiresByType image/png              "access plus 30 days"
+    ExpiresByType image/webp             "access plus 30 days"
+    ExpiresByType image/avif             "access plus 30 days"
+    ExpiresByType image/svg+xml          "access plus 30 days"
+    ExpiresByType image/x-icon           "access plus 30 days"
+
+    # XML / sitemaps / robots
+    ExpiresByType application/xml        "access plus 1 hour"
+    ExpiresByType text/xml               "access plus 1 hour"
+
+    # Manifest / SW
+    ExpiresByType application/manifest+json "access plus 1 hour"
+</IfModule>
+
+# Immutable cache for fingerprinted assets (URLs carry ?v=<hash>)
+<IfModule mod_headers.c>
+    # Fonts are content-addressed in practice
+    <FilesMatch "\.(woff2?|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # When the request includes ?v=… (cache-busted CSS/JS/images), make
+    # the response immutable for a year. Hostinger's Apache supports
+    # SetEnvIfNoCase for this pattern.
+    SetEnvIfNoCase Request_URI "\?v=" HELM_FINGERPRINTED
+    Header set Cache-Control "public, max-age=31536000, immutable" env=HELM_FINGERPRINTED
+
+    # Service worker MUST NOT be long-cached
+    <FilesMatch "service-worker\.js$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+    </FilesMatch>
+
+    # robots/sitemap short cache
+    <FilesMatch "(robots\.txt|sitemap\.xml|llms\.txt)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# ===========================================================
+#  Errors
+# ===========================================================
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /404.html
+
+# ===========================================================
+#  Deny dotfiles, dev artifacts, package manifests
+# ===========================================================
+<FilesMatch "(^\.(?!well-known)|^_dev|^DEVELOPMENT_PLAN\.md$|^LAUNCH_PLAN\.md$|^README\.md$|^CLAUDE\.md$|^package(-lock)?\.json$|^todos\.md$|^eleventy\.config\.js$|^tailwind\.config\.js$|^postcss\.config\.js$|\.src\.(css|js)$|\.example\.php$)">
+    Require all denied
+</FilesMatch>
+
+# Block direct access to repo / build dirs even if they ever land here
+RedirectMatch 404 ^/(\.git|\.github|node_modules|_dev|_includes|_data|inputs)(/|$)
+
+# Allow the ACME challenge folder for Let's Encrypt
+<IfModule mod_alias.c>
+    Alias "/.well-known/" "/.well-known/"
+</IfModule>
+<Directory "/.well-known/">
+    Require all granted
+</Directory>

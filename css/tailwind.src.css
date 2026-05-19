@@ -1,0 +1,10 @@
+/* Head of AI — Tailwind production entry. Compiled by PostCSS:
+ *   npm run build:css  →  site/css/tailwind.css (purged, minified).
+ *
+ * Custom Aura tokens + shared component classes live in style.src.css.
+ * Tailwind here only provides utilities.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
